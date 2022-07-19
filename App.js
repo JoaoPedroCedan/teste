@@ -19,7 +19,7 @@ export default function App() {
         </View>
 
         <View style={styles.main}>
-          <View>
+          <View style={styles.ViewRetangulo}>
             <Image
                   style={styles.retangulo}
                   source={require('./assets/Retangulo.png')}
@@ -59,13 +59,24 @@ const styles = StyleSheet.create({
   },
   main:{
     height:'80%',
+    width:'100%'
   },
   retangulo:{
     width:'100%',
     height:'100%',
+    
+    
+  },
+  ViewRetangulo: {
+    height:'35%',
+    margin:0,
+    padding:0,
+    width:'100%',
+    position: 'absolute',
+    bottom: 0
   },
   footer:{
-    height:'10%',
+    height:'20%',
     backgroundColor:'#19aa6d'
   }
 
