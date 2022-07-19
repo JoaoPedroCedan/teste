@@ -21,8 +21,12 @@ export default function App() {
         <View style={styles.main}>
           <View style={styles.ViewRetangulo}>
             <View style={styles.ViewCirculo}>
-            
             </View>
+            <Image
+              source={require('./assets/Criar.png')}
+              style={styles.headerLogo}
+              resizeMode='contain'
+            />
           </View>
         </View>
 
@@ -37,6 +41,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    overflow:'hidden'
   },
   background:{
     flex:1,
@@ -48,15 +53,14 @@ const styles = StyleSheet.create({
     backgroundColor:'#19aa6d',
     justifyContent:'center',
     alignItems: 'flex-start',
-    overflow: 'hidden',
   },
   headerLogo:{
     width:'50%',
     height:'50%',
-    marginTop:'5%'
+    marginTop:'8%'
   },
   main:{
-    height:'80%',
+    height:'82%',
     width:'100%',
     justifyContent: 'flex-end',
     alignItems:'center'
@@ -68,30 +72,29 @@ const styles = StyleSheet.create({
     
   },
   ViewRetangulo: {
-    width: 700,
+    width: 900,
     height: 0,
-    borderBottomWidth: '15em',
+    borderBottomWidth: 290,
     borderBottomColor: '#044421',
-    borderLeftWidth: '15em',
+    borderLeftWidth: 380,
     borderLeftColor: 'transparent',
-    borderRightWidth: '15em',
+    borderRightWidth: 380,
     borderRightColor: 'transparent',
-    borderStyle: 'solid'
+    borderStyle: 'solid',
+    alignItems:'center',
   },
   ViewCirculo: {
     height:250,
-    width:260,
-    borderRadius: '100%',
+    width:250,
+    borderRadius:250,
     backgroundColor:'#fff',
     position:'absolute',
-    alignItems:'center',
-    bottom:-90
-  
-    
+    top:-22,
+    backgroundColor:'#e0e5cf'
 
   },
   footer:{
-    height:'10%',
+    height:'8%',
     backgroundColor:'#19aa6d'
   }
 
