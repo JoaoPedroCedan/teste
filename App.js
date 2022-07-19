@@ -20,11 +20,6 @@ export default function App() {
 
         <View style={styles.main}>
           <View style={styles.ViewRetangulo}>
-            <Image
-                  style={styles.retangulo}
-                  source={require('./assets/Retangulo.png')}
-                >
-            </Image>
           </View>
         </View>
 
@@ -59,7 +54,9 @@ const styles = StyleSheet.create({
   },
   main:{
     height:'80%',
-    width:'100%'
+    width:'100%',
+    justifyContent: 'flex-end',
+    alignItems:'center'
   },
   retangulo:{
     width:'100%',
@@ -68,15 +65,24 @@ const styles = StyleSheet.create({
     
   },
   ViewRetangulo: {
-    height:'35%',
+    width: 700,
+    height: 0,
+    borderBottomWidth: '15em',
+    borderBottomColor: '#044421',
+    borderLeftWidth: '15em',
+    borderLeftColor: 'transparent',
+    borderRightWidth: '15em',
+    borderRightColor: 'transparent',
+    borderStyle: 'solid'
+  },
+  ViewCirculo: {
+    height:'100%',
     margin:0,
     padding:0,
     width:'100%',
-    position: 'absolute',
-    bottom: 0
   },
   footer:{
-    height:'20%',
+    height:'10%',
     backgroundColor:'#19aa6d'
   }
 
