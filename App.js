@@ -20,6 +20,9 @@ export default function App() {
 
         <View style={styles.main}>
           <View style={styles.ViewRetangulo}>
+            <View style={styles.ViewCirculo}>
+            
+            </View>
           </View>
         </View>
 
@@ -76,10 +79,16 @@ const styles = StyleSheet.create({
     borderStyle: 'solid'
   },
   ViewCirculo: {
-    height:'100%',
-    margin:0,
-    padding:0,
-    width:'100%',
+    height:250,
+    width:260,
+    borderRadius: '100%',
+    backgroundColor:'#fff',
+    position:'absolute',
+    alignItems:'center',
+    bottom:-90
+  
+    
+
   },
   footer:{
     height:'10%',
