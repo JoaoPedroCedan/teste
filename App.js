@@ -26,22 +26,26 @@ export default function App() {
                   resizeMode='contain'
                 />
               <View style={styles.ViewCirculo}>
-                
                 <View style={styles.FormInput}>
                   <Text style={styles.TextLabel}>Login CPF ou CNPJ</Text>  
                     <TextInput
                       style={styles.input}
+                      keyboardType='numeric'
                     />
                 </View>  
+                <Text style={styles.TextLabel}>Senha</Text>  
                 <View style={styles.FormInput}>
                   <Text style={styles.TextLabel}>Senha</Text>  
                     <TextInput
                       style={styles.input}
-                    />
+                    >
+                    </TextInput>
                 </View>    
                 <TouchableOpacity style={styles.ButtonEntrar}>
                   <Text style={styles.textButton}>Entrar</Text>
                 </TouchableOpacity>
+                <Text style={styles.TextEsqueceuSenha}>Esqueceu sua senha?</Text>
+                <Text style={styles.TextCliqueAqui}>CLIQUE AQUI</Text>
               </View>
             </View>
           </View>
@@ -52,7 +56,6 @@ export default function App() {
               style={styles.footerLogo}
               resizeMode='contain'
             >
-
             </Image>
             <Text style={styles.footerText} color="#fff">Copyright Universidade Rodobens 2022</Text>
           </View>
@@ -109,33 +112,34 @@ const styles = StyleSheet.create({
     top:-22,
     backgroundColor:'#e0e5cf',
     alignItems:'center',
-    justifyContent:'center'
-
+    justifyContent:'center',
+    overflow:'hidden',
   },
   FormInput: {
-    width:"90%",
+    width:"80%",
     marginLeft:'7%',
-    marginBottom:'7%',
+    marginBottom:'6%',
   },
   input: {
     width:"90%",
     backgroundColor:"#e0e5cf",
-    height: 40,
-    paddingLeft: 10,
+    height: 30,
+    paddingLeft: 5,
+    paddingRight: 5,
     borderColor:'#044421',
-    borderWidth:4,
+    borderWidth:1.2,
     borderRadius:5
-
   },
   TextLabel:{
     color:"#f88b3a",
     fontWeight:'300',
+    textAlign: 'center',
     padding:1,
+    marginLeft:10,
     backgroundColor:'#e0e5cf',
     position:'absolute',
     top:-13,
     zIndex: 1,
-    
   },
   criarLogo:{
     width:"80%",
@@ -147,10 +151,10 @@ const styles = StyleSheet.create({
     justifyContent:"center",
     width:"50%",
     backgroundColor:"#f88b3a",
-    paddingTop: 13,
-    paddingBottom:13,
+    paddingTop: 8,
+    paddingBottom:12,
     borderRadius:5,
-    
+    marginTop:-9
   },
   footer:{
     height:'8%',
@@ -168,10 +172,20 @@ const styles = StyleSheet.create({
     color:'#fff',
   },
   textButton: {
-    fontSize: 15,
+    fontSize: 16,
     color: "#fff",
     fontWeight: 'bold',
-}
-
-
+    letterSpacing:0.5,
+  },
+  TextEsqueceuSenha:{
+    fontSize:12,
+    marginTop:10,
+    color:'#f88b3a',
+    letterSpacing:0.1,
+  },
+  TextCliqueAqui:{
+    fontWeight: 'bold',
+    marginTop:5,
+    letterSpacing:0.1,
+  }
 });
