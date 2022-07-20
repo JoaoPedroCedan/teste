@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, StatusBar,Image,ImageBackground,TextInput,ScrollView,Button } from 'react-native';
+import { StyleSheet,TouchableOpacity, Text, View, SafeAreaView, StatusBar,Image,ImageBackground,TextInput,ScrollView,Button } from 'react-native';
 
 export default function App() {
   return (
@@ -26,13 +26,20 @@ export default function App() {
                   resizeMode='contain'
                 />
               <View style={styles.ViewCirculo}>
-                <TextInput
-                  style={styles.input}
-                />
-                <TextInput
-                  style={styles.input}
-                />
-                <Button/>
+                
+                <View style={styles.FormInput}>
+                <Text style={styles.TextLabel}>Login CPF ou CNPJ</Text>  
+                  <TextInput
+                    style={styles.input}
+                  />
+                </View>  
+                <View style={styles.FormInput}>
+                <Text style={styles.TextLabel}>Senha</Text>  
+                  <TextInput
+                    style={styles.input}
+                  />
+                </View>    
+
               </View>
             </View>
           </View>
@@ -96,7 +103,6 @@ const styles = StyleSheet.create({
     height:250,
     width:250,
     borderRadius:250,
-    backgroundColor:'#fff',
     position:'absolute',
     top:-22,
     backgroundColor:'#e0e5cf',
@@ -104,19 +110,36 @@ const styles = StyleSheet.create({
     justifyContent:'center'
 
   },
+  FormInput: {
+    width:"90%",
+    marginLeft:'7%',
+    marginBottom:'7%',
+  },
   input: {
     width:"90%",
-    backgroundColor:"#FFF",
+    backgroundColor:"#e0e5cf",
     height: 40,
     paddingLeft: 10,
-    borderColor:'#f88b3a',
-    borderWidth:1
-     
+    borderColor:'#044421',
+    borderWidth:4,
+    borderRadius:5
+
+  },
+  TextLabel:{
+    color:"#f88b3a",
+    fontWeight:'Bold',
+    padding:5,
+    backgroundColor:'#e0e5cf',
+    position:'absolute',
+    top:-13
   },
   criarLogo:{
     width:"80%",
     marginRight:'150%',
     marginTop:'130%'
+  },
+  ButtonEntrar: {
+
   },
   footer:{
     height:'8%',
