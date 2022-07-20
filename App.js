@@ -127,11 +127,13 @@ const styles = StyleSheet.create({
   },
   TextLabel:{
     color:"#f88b3a",
-    fontWeight:'Bold',
+    fontWeight:'300',
     padding:5,
     backgroundColor:'#e0e5cf',
     position:'absolute',
-    top:-13
+    top:-13,
+    zIndex: 1,
+    
   },
   criarLogo:{
     width:"80%",
