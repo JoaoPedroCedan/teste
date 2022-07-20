@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, StatusBar,Image,ImageBackground,TextInput,ScrollView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, StatusBar,Image,ImageBackground,TextInput,ScrollView,Button } from 'react-native';
 
 export default function App() {
   return (
@@ -26,8 +26,13 @@ export default function App() {
                   resizeMode='contain'
                 />
               <View style={styles.ViewCirculo}>
-                <TextInput>Insira aqui</TextInput>
-                <TextInput>Insira aqui 2</TextInput>
+                <TextInput
+                  style={styles.input}
+                />
+                <TextInput
+                  style={styles.input}
+                />
+                <Button/>
               </View>
             </View>
           </View>
@@ -96,8 +101,17 @@ const styles = StyleSheet.create({
     top:-22,
     backgroundColor:'#e0e5cf',
     alignItems:'center',
-    justifyContent: 'space-around'
+    justifyContent:'center'
 
+  },
+  input: {
+    width:"90%",
+    backgroundColor:"#FFF",
+    height: 40,
+    paddingLeft: 10,
+    borderColor:'#f88b3a',
+    borderWidth:1
+     
   },
   criarLogo:{
     width:"80%",
