@@ -28,18 +28,20 @@ export default function App() {
               <View style={styles.ViewCirculo}>
                 
                 <View style={styles.FormInput}>
-                <Text style={styles.TextLabel}>Login CPF ou CNPJ</Text>  
-                  <TextInput
-                    style={styles.input}
-                  />
+                  <Text style={styles.TextLabel}>Login CPF ou CNPJ</Text>  
+                    <TextInput
+                      style={styles.input}
+                    />
                 </View>  
                 <View style={styles.FormInput}>
-                <Text style={styles.TextLabel}>Senha</Text>  
-                  <TextInput
-                    style={styles.input}
-                  />
+                  <Text style={styles.TextLabel}>Senha</Text>  
+                    <TextInput
+                      style={styles.input}
+                    />
                 </View>    
-
+                <TouchableOpacity style={styles.ButtonEntrar}>
+                  <Text style={styles.textButton}>Entrar</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -128,7 +130,7 @@ const styles = StyleSheet.create({
   TextLabel:{
     color:"#f88b3a",
     fontWeight:'300',
-    padding:5,
+    padding:1,
     backgroundColor:'#e0e5cf',
     position:'absolute',
     top:-13,
@@ -141,7 +143,14 @@ const styles = StyleSheet.create({
     marginTop:'130%'
   },
   ButtonEntrar: {
-
+    alignItems:"center",
+    justifyContent:"center",
+    width:"50%",
+    backgroundColor:"#f88b3a",
+    paddingTop: 13,
+    paddingBottom:13,
+    borderRadius:5,
+    
   },
   footer:{
     height:'8%',
@@ -157,7 +166,12 @@ const styles = StyleSheet.create({
   footerText:{
     fontSize:7,
     color:'#fff',
-  }
+  },
+  textButton: {
+    fontSize: 15,
+    color: "#fff",
+    fontWeight: 'bold',
+}
 
 
 });
