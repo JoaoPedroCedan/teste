@@ -1,19 +1,28 @@
 import React from 'react';
 import { StyleSheet,TouchableOpacity, Text, View, SafeAreaView, StatusBar,Image,ImageBackground,TextInput,ScrollView,Button } from 'react-native';
 import {Ionicons} from '@expo/vector-icons' 
+import { useFonts } from 'expo-font';
 
 export default function App() {
+  const [loaded] = useFonts({
+    BossaRegular: require('./src/assets/fonts/Bossa-Regular.otf'),
+    BossaBold: require('./src/assets/fonts/Bossa-Bold.otf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
   return (
       <SafeAreaView style={styles.container}>
         <StatusBar translucent backgroundColor="transparent"/>
         <ImageBackground
-          source={require('./assets/Background.png')}
+          source={require('./src/assets/Background.png')}
           style={styles.background}
           resizeMode='cover'
         >
           <View style={styles.header}>
             <Image
-              source={require('./assets/LogoUniversidade.png')}
+              source={require('./src/assets/LogoUniversidade.png')}
               style={styles.headerLogo}
               resizeMode='contain'
             />
@@ -22,13 +31,13 @@ export default function App() {
           <View style={styles.main}>
             <View style={styles.ViewRetangulo}>         
                 <Image 
-                  source={require('./assets/Criar.png')}
+                  source={require('./src/assets/Criar.png')}
                   style={styles.criarLogo}
                   resizeMode='contain'
                 />
               <View style={styles.ViewCirculo}>
                 <Image
-                  source={require('./assets/LogoUniversidadeLab.png')}
+                  source={require('./src/assets/LogoUniversidadeLab.png')}
                   style={styles.labLogo}
                   resizeMode='contain'
                 />
@@ -62,7 +71,7 @@ export default function App() {
 
           <View style={styles.footer}>
             <Image
-              source={require('./assets/LogoUniversidade.png')}
+              source={require('./src/assets/LogoUniversidade.png')}
               style={styles.footerLogo}
               resizeMode='contain'
             >
@@ -88,13 +97,11 @@ const styles = StyleSheet.create({
     height:'12%',
     backgroundColor:'#19aa6d',
     justifyContent:'center',
-    alignItems: 'flex-start',
   },
   headerLogo:{
-    width:'30%',
-    height:'30%',
+    width:'25%',
+    height:'25%',
     marginTop:'6%',
-    marginBottom:'1%'
   },
   main:{
     height:'80%',
@@ -126,7 +133,7 @@ const styles = StyleSheet.create({
     overflow:'hidden',
   },
   FormInput: {
-    width:"80%",
+    width:"95%",
     marginLeft:'7%',
     marginBottom:'6%',
   },
@@ -140,14 +147,16 @@ const styles = StyleSheet.create({
   },
   TextLabel:{
     color:"#f88b3a",
-    fontWeight:'400',
-    textAlign: 'center',
-    padding:1,
+    paddingLeft:2,
+    paddingRight:2,
+    fontSize:12,
+    marginTop:6,
     marginLeft:10,
     backgroundColor:'#e0e5cf',
     position:'absolute',
     top:-13,
     zIndex: 1,
+    fontFamily:'BossaRegular',
   },
   criarLogo:{
     width:"80%",
@@ -180,21 +189,22 @@ const styles = StyleSheet.create({
     color:'#fff',
   },
   textButton: {
-    fontSize: 16,
+    fontSize: 18,
     color: "#fff",
-    fontWeight: 'bold',
     letterSpacing:0.5,
+    fontFamily:'BossaBold',
   },
   TextEsqueceuSenha:{
     fontSize:12,
     marginTop:10,
     color:'#f88b3a',
-    letterSpacing:0.1,
+    fontFamily:'BossaRegular',
   },
   TextCliqueAqui:{
-    fontWeight: 'bold',
     marginTop:5,
-    letterSpacing:0.1,
+    color:'#044421',
+    fontFamily:'BossaRegular',
+    letterSpacing:-0.5
   },
   InputIcon:{
     flexDirection: 'row',
