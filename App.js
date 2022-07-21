@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet,TouchableOpacity, Text, View, SafeAreaView, StatusBar,Image,ImageBackground,TextInput,ScrollView,Button } from 'react-native';
+import {Ionicons} from '@expo/vector-icons' 
 
 export default function App() {
   return (
@@ -26,20 +27,29 @@ export default function App() {
                   resizeMode='contain'
                 />
               <View style={styles.ViewCirculo}>
+                <Image
+                  source={require('./assets/LogoUniversidadeLab.png')}
+                  style={styles.labLogo}
+                  resizeMode='contain'
+                />
                 <View style={styles.FormInput}>
-                  <Text style={styles.TextLabel}>Login CPF ou CNPJ</Text>  
-                    <TextInput
-                      style={styles.input}
-                      keyboardType='numeric'
-                    />
+                  <Text style={styles.TextLabel}>Login: CPF ou CNPJ</Text> 
+                    <View style={styles.InputIcon}>
+                      <Ionicons name='person-sharp' color="#044421" size={20}></Ionicons>
+                      <TextInput
+                        style={styles.input}
+                        keyboardType='numeric'
+                      />
+                    </View> 
                 </View>  
-                <Text style={styles.TextLabel}>Senha</Text>  
                 <View style={styles.FormInput}>
-                  <Text style={styles.TextLabel}>Senha</Text>  
-                    <TextInput
-                      style={styles.input}
-                    >
-                    </TextInput>
+                  <Text style={styles.TextLabel}>Senha</Text> 
+                    <View style={styles.InputIcon}>
+                      <Ionicons name='lock-closed-sharp' color="#044421" size={20}></Ionicons>
+                        <TextInput
+                          style={styles.input}
+                        />
+                    </View>
                 </View>    
                 <TouchableOpacity style={styles.ButtonEntrar}>
                   <Text style={styles.textButton}>Entrar</Text>
@@ -121,18 +131,16 @@ const styles = StyleSheet.create({
     marginBottom:'6%',
   },
   input: {
-    width:"90%",
+    width:"80%",
     backgroundColor:"#e0e5cf",
     height: 30,
-    paddingLeft: 5,
-    paddingRight: 5,
-    borderColor:'#044421',
-    borderWidth:1.2,
+    paddingLeft: 1,
+    paddingRight: 1,
     borderRadius:5
   },
   TextLabel:{
     color:"#f88b3a",
-    fontWeight:'300',
+    fontWeight:'400',
     textAlign: 'center',
     padding:1,
     marginLeft:10,
@@ -187,5 +195,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop:5,
     letterSpacing:0.1,
+  },
+  InputIcon:{
+    flexDirection: 'row',
+    width:'90%',
+    alignItems: 'center',
+    borderColor:'#044421',
+    borderWidth:1.2,
+    borderRadius:5
+  },
+  labLogo:{
+    width:'75%',
+    height:'25%'
   }
 });
