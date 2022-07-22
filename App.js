@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     width:'25%',
     height:'25%',
     marginTop:'6%',
+    marginLeft:'4%'
   },
   main:{
     height:'80%',
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
     marginBottom:'6%',
   },
   input: {
-    width:"80%",
+    width:"90%",
     backgroundColor:"#e0e5cf",
     height: 30,
     paddingLeft: 1,
@@ -149,14 +150,14 @@ const styles = StyleSheet.create({
     color:"#f88b3a",
     paddingLeft:2,
     paddingRight:2,
-    fontSize:12,
+    fontSize:10,
     marginTop:6,
     marginLeft:10,
     backgroundColor:'#e0e5cf',
     position:'absolute',
     top:-13,
     zIndex: 1,
-    fontFamily:'BossaRegular',
+    fontFamily:'BossaBold',
   },
   criarLogo:{
     width:"80%",
@@ -181,7 +182,7 @@ const styles = StyleSheet.create({
   },
   footerLogo:{
     width:'30%',
-    height:'30%',
+    height:'35%',
     marginBottom:'2%'
   },
   footerText:{
@@ -189,33 +190,35 @@ const styles = StyleSheet.create({
     color:'#fff',
   },
   textButton: {
-    fontSize: 18,
+    fontSize: 14,
     color: "#fff",
     letterSpacing:0.5,
     fontFamily:'BossaBold',
   },
   TextEsqueceuSenha:{
-    fontSize:12,
+    fontSize:10,
     marginTop:10,
     color:'#f88b3a',
-    fontFamily:'BossaRegular',
+    fontFamily:'BossaBold',
   },
   TextCliqueAqui:{
     marginTop:5,
     color:'#044421',
-    fontFamily:'BossaRegular',
-    letterSpacing:-0.5
+    fontFamily:'BossaBold',
+    letterSpacing:-0.5,
+    fontSize:10,
   },
   InputIcon:{
     flexDirection: 'row',
     width:'90%',
     alignItems: 'center',
     borderColor:'#044421',
-    borderWidth:1.2,
-    borderRadius:5
+    borderWidth:1.9,
+    borderRadius:5,
   },
   labLogo:{
     width:'75%',
-    height:'25%'
+    height:'25%',
+    padding:5
   }
 });
